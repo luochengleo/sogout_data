@@ -25,10 +25,11 @@ if __name__=='__main__':
 
     for f in files:
         filepath = path+'/'+f
+        print filepath
         dp = DocumentParser(filepath)
         count = 0
         while dp.getWhetherEnd()==False:
-            docno, url, content, url = dp.getDocument()
+            docno, url, content = dp.getDocument()
             if docno in baseline:
                 fout.write('\n'.join(['<doc>','<docno>'+docno+'</docno>', '<url>'+url+'</url>', content,'</doc>'])+'\n')
     fout.close()
