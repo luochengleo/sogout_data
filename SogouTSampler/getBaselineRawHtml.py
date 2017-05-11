@@ -13,7 +13,7 @@ from DocumentParser import *
 
 if __name__=='__main__':
     tag = sys.argv[1]
-    path = '/home/luocheng/zhengyukun/index_build/sogouTSample/sample_result.'+tag+'comp'
+    path = '/home/luocheng/zhengyukun/index_build/sogouTSample/sample_result.'+tag+'.comp'
     fout = open('/home/luocheng/dataset/ntcirwww/baseline_html/'+tag,'w')
     import os
     files = os.listdir(path)
