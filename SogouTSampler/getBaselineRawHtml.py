@@ -31,6 +31,7 @@ if __name__=='__main__':
         count = 0
         while dp.getWhetherEnd()==False:
             docno, url, content = dp.getDocument()
+            print docno, url, content
             if docno in baseline:
                 fout.write('\n'.join(['<doc>','<docno>'+docno+'</docno>', '<url>'+url+'</url>', content,'</doc>'])+'\n')
     fout.close()
