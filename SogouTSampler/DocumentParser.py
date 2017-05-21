@@ -7,6 +7,7 @@ sys.setdefaultencoding('utf8')
 
 # encoding:utf-8
 from bz2file import BZ2File
+
 from AnchorExtractor import reextract
 
 
@@ -37,8 +38,8 @@ class DocumentParser:
             while True:
                 if debug:
                     pass
-
                 s = self.reader.readline()
+
                 self.readcount += 1
                 if len(s) == 0:
                     self.reachEnd = True
